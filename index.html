@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title></title>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery-css-transform.js"></script>
+<script type="text/javascript" src="rotate3Di.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+/*$(document).ready(function(){
+    $("#ex3").click(function(){
+        $(this).hide();
+    });
+});*/
+</script>
+
+<style>
+#clicker { 
+    width: 100px; 
+    height: 100px; 
+    background-color: Green; 
+}
+
+#rotating { 
+    width: 300px; 
+    height: 300px; 
+    background-color: Red; 
+    margin-top: 70px; 
+    text-align: center;
+    background-image: url("hracia-kocka.jpg");
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.rotated { 
+	background-image: url("hracia-kocka.jpg");
+    transform:rotate(360deg); 
+    -webkit-transform:rotate(360deg); 
+    -moz-transform:rotate(360deg); 
+    -o-transform:rotate(360deg); 
+}
+</style>
+<script>
+var pocet = 0;
+
+$(document).ready(function() {
+    $('#rotating').click(function() {
+
+    		 $('#rotating').toggleClass('rotated');
+     			pocet++;
+     			if(pocet >= 5){
+     				console.log("tvoj typ je asas" + pocet);
+     				pocet = 0;
+     			}
+    });
+});
+</script>
+</head>
+<body>
+
+
+<div class="container">
+  <div class="row">
+	<div class="col-*-*"> <div><div style=" margin-top:100px; border-radius: 25px; background-color: darkturquoise; margin-top: 0; padding-top: 1em;padding-bottom: 1em;margin-bottom: 10px;"><h1 class="text-center">Game - cube</h1></div> </div> </div>
+    <div class="col-*-*"> <div style="margin-left: 30em;" id="rotating"> </div> </div>
+     <div class="col-*-*, text-center" style="margin-top: 50px"> 
+					<input type="text" id="myText" placeholder="TODO" style="font-size: 2em">
+				</div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
